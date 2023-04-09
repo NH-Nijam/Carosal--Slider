@@ -1,0 +1,22 @@
+const images = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+    "images/7.jpg",
+    "images/8.jpg"
+    
+];
+let imageIndex =0;
+const sliderImg =document.getElementById('slider-img');
+setInterval(() => {
+    if(imageIndex === images.length){
+        imageIndex = 0;
+    }
+    const imageUrl = images[imageIndex];
+    console.log(imageIndex, imageUrl)
+    sliderImg.setAttribute('src', imageUrl);
+    imageIndex++;
+},2000)
